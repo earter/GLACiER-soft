@@ -5,7 +5,7 @@
 #include <math.h>
 
 // If false, then use the calibration. If true, don't use the calibration.
-#define CALIBRATE_FIRST false
+#define CALIBRATE_FIRST true
 #define CALIBRATE_SECOND false
 
 //First distance from ground truth 2 meters
@@ -15,8 +15,8 @@
 
 #define USE_MEDIAN_FILT true
 
-#define BEACON_1_ADDRESS 0x1A2A
-#define BEACON_2_ADDRESS 0x2A4A
+#define BEACON_1_ADDRESS 0x1A1A
+#define BEACON_2_ADDRESS 0x2A1A
 #define BEACON_3_ADDRESS 0x1A3A
 
 #define BEACON_1_X 0.00f
@@ -62,15 +62,6 @@ float beacon_3_offset = 5.0f-(1.0f/beacon_3_slope*BEACON_3_SECONDDIST);
 const uint8_t PIN_RST = 3; // reset pin
 const uint8_t PIN_IRQ = 7; // irq pin
 const uint8_t PIN_SS = 10; // spi select pin
-
-/*
-// MEGA connection pins
-const uint8_t PIN_RST = 46; // reset pin
-const uint8_t PIN_IRQ = 48; // irq pin
-const uint8_t PIN_SS = 53; // spi select pin
-*/
-/* MISO = 50  MOSI = 51  SCK = 52  */
-
 volatile unsigned long delaySent = 0;
 volatile boolean sentAck = false;
 volatile float range = 0;
@@ -176,10 +167,8 @@ cir_t *cir3 = cir_new();
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("test setup");
   delay(1000);
   pinMode(6,OUTPUT);
-
   
   //init the configuration
   DW1000Ranging.initCommunication(PIN_RST, PIN_SS, PIN_IRQ);
@@ -204,11 +193,11 @@ void setup() {
 }
 void loop() {
   DW1000Ranging.loop();
-//  Serial.println("test loop");
+  Serial.println("test");
 }
 
 void newRange() {
-   Serial.println("test newrange");
+    
   address = DW1000Ranging.getDistantDevice()->getShortAddress();
 
   range = DW1000Ranging.getDistantDevice()->getRange();
@@ -250,7 +239,6 @@ void newRange() {
       }
     }
   }
-  Serial.print("eloo");
   Serial.print("1: ");Serial.print(dist[0]);Serial.print(" 2: ");Serial.print(dist[1]);Serial.print(" 3: ");Serial.print(dist[2]);
   
   // ITERATIVE STEPS BELOW
