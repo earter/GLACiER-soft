@@ -1,0 +1,7 @@
+screen /dev/ttyUSB0 19200
+
+sudo rm -rf /root/Arduino/libraries/arduino-dw1000-master
+
+sudo find / -iname "DW1000.cpp"
+ 
+sudo vim /root/Arduino/libraries/arduino-dw1000-master/src/DW1000.cpp
