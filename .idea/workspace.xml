@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ad73d0a-1878-4c78-b8f3-53a0535f10aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/habitat/dot_it.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habitat/hab_data_visualise.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habitat/hab_rec_fake_data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habitat/hab_send_read_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habitat/hab_test1_dotted.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habitat/uart_threading.py" beforeDir="false" afterPath="$PROJECT_DIR$/habitat/gnss_uart_send_read_test.py" afterDir="false" />
+    <list default="true" id="6ad73d0a-1878-4c78-b8f3-53a0535f10aa" name="Default Changelist" comment="exended habitat">
+      <change afterPath="$PROJECT_DIR$/habitat/hab_read_send_real.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/habitat/test_data/sample_weather" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gnss_localisation/receive_send_to_pc/receive_send_to_pc.ino" beforeDir="false" afterPath="$PROJECT_DIR$/gnss_localisation/receive_send_to_pc/receive_send_to_pc.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/dot_it.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/gnss_uart_send_read_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/habitat/gnss_uart_send_read_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/hab_rec_fake_data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/hab_send.py" beforeDir="false" afterPath="$PROJECT_DIR$/habitat/hab_send.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/hab_send_read_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/habitat/hab_send_read_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/hab_test1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/hab_test1_dotted.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/log_gnss.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/nmea_example.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/nmea_itc_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/nmea_itc_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/nmea_itc_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/nmea_send_uart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/nmea_uart.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/nmea_uart_receive.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,12 +30,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/habitat/hab_send_read_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="36" column="10" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="10" />
+            <state relative-caret-position="184">
+              <caret line="84" selection-start-line="83" selection-start-column="22" selection-end-line="84" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -30,39 +44,39 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/habitat/hab_test1_dotted.txt">
+        <entry file="file://$PROJECT_DIR$/habitat/hab_send.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/habitat/test_data/hab_test1_dotted.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/habitat/test_data/sample_weather">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="634" selection-start-column="634" selection-end-column="634" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/habitat/dot_it.py">
+        <entry file="file://$PROJECT_DIR$/habitat/hab_read_send_real.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/habitat/hab_test1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/habitat/hab_data_visualise.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="199">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,20 +85,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/habitat/gnss_uart_send_read_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="124">
+              <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
               <folding>
                 <element signature="e#23#36#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/habitat/hab_rec_fake_data.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -114,31 +119,25 @@
         <option value="$PROJECT_DIR$/habitat/hab_rec_fake_data" />
         <option value="$PROJECT_DIR$/habitat/hab_read.py" />
         <option value="$PROJECT_DIR$/habitat/hab_send_read.py" />
-        <option value="$PROJECT_DIR$/habitat/gnss_uart_send_read_test.py" />
         <option value="$PROJECT_DIR$/habitat/hab_data_visualise.py" />
         <option value="$PROJECT_DIR$/habitat/hab_rec_fake_data.txt" />
         <option value="$PROJECT_DIR$/habitat/hab_test1.txt" />
         <option value="$PROJECT_DIR$/habitat/dot_it.py" />
         <option value="$PROJECT_DIR$/habitat/hab_test1_dotted.txt" />
+        <option value="$PROJECT_DIR$/habitat/dzialaj.py" />
+        <option value="$PROJECT_DIR$/habitat/kurwaa.py" />
         <option value="$PROJECT_DIR$/habitat/hab_send_read_test.py" />
+        <option value="$PROJECT_DIR$/habitat/hab_send.py" />
+        <option value="$PROJECT_DIR$/habitat/gnss_uart_send_read_test.py" />
+        <option value="$PROJECT_DIR$/habitat/starecoszrepoktoreuratowalosprawe.py" />
+        <option value="$PROJECT_DIR$/habitat/hab_read_send_real.py" />
+        <option value="$PROJECT_DIR$/habitat/test_data/sample_weather" />
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-        <option value="$PROJECT_DIR$/.idea/GLACiER-soft.iml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-3" />
-    <option name="width" value="1372" />
-    <option name="height" value="738" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1368" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -157,6 +156,12 @@
               <item name="GLACiER-soft" type="b2602c69:ProjectViewProjectNode" />
               <item name="GLACiER-soft" type="462c0819:PsiDirectoryNode" />
               <item name="habitat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GLACiER-soft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GLACiER-soft" type="462c0819:PsiDirectoryNode" />
+              <item name="habitat" type="462c0819:PsiDirectoryNode" />
+              <item name="test_data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -186,8 +191,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.hab_send_read_test">
-    <configuration name="dot_it" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.hab_send">
+    <configuration name="dzialaj" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GLACiER-soft" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -199,7 +204,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/habitat/dot_it.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/habitat/dzialaj.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -208,7 +213,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="hab_data_visualise" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="hab_read_send_real" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GLACiER-soft" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -220,7 +225,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/habitat/hab_data_visualise.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/habitat/hab_read_send_real.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -229,7 +234,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="hab_send_read_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="hab_send" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GLACiER-soft" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -241,7 +246,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/habitat/hab_send_read_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/habitat/hab_send.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="kurwaa" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GLACiER-soft" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/habitat" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/habitat/kurwaa.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -273,10 +299,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.hab_send_read_test" />
-        <item itemvalue="Python.dot_it" />
-        <item itemvalue="Python.hab_data_visualise" />
+        <item itemvalue="Python.hab_send" />
+        <item itemvalue="Python.hab_read_send_real" />
         <item itemvalue="Python.uart_threading" />
+        <item itemvalue="Python.kurwaa" />
+        <item itemvalue="Python.dzialaj" />
       </list>
     </recent_temporary>
   </component>
@@ -284,14 +311,14 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="0" width="1372" height="738" extended-state="6" />
+    <frame x="0" y="0" width="1368" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24944155" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2501867" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3284553" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33333334" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -301,47 +328,58 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="11" />
-      <window_info anchor="right" x="0" y="0" width="586" height="538" id="Documentation" weight="0.32954547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" x="0" y="0" width="586" height="538" id="Documentation" order="3" weight="0.32954547" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="exended habitat" />
+    <option name="LAST_COMMIT_MESSAGE" value="exended habitat" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/habitat/log_gnss.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/habitat/gnss_uart_send_read_test.py">
+    <entry file="file://$PROJECT_DIR$/habitat/hab_test1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#23#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/habitat/hab_data_visualise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/habitat/hab_rec_fake_data.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/habitat/hab_test1.txt">
+    <entry file="file://$PROJECT_DIR$/habitat/dzialaj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+        <state relative-caret-position="80">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding>
+            <element signature="e#23#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/nmea_itc_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/kurwaa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#23#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -355,24 +393,102 @@
     <entry file="file://$PROJECT_DIR$/habitat/hab_test1_dotted.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/habitat/hab_send.py">
+    <entry file="file://$PROJECT_DIR$/habitat/hab_data_visualise.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="150">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/nmea_uart_receive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/nmea_uart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/nmea_send_uart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/starecoszrepoktoreuratowalosprawe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+          <folding>
+            <element signature="e#23#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/nmea_to_deg_dec.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/gnss_uart_send_read_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding>
+            <element signature="e#23#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/habitat/hab_send_read_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="36" column="10" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="10" />
+        <state relative-caret-position="184">
+          <caret line="84" selection-start-line="83" selection-start-column="22" selection-end-line="84" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/hab_read_send_real.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/hab_send.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/test_data/hab_test1_dotted.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/test_data/sample_weather">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="634" selection-start-column="634" selection-end-column="634" />
         </state>
       </provider>
     </entry>

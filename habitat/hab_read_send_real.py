@@ -1,4 +1,5 @@
 import serial
+import threading
 
 port_name = "/dev/ttyACM0"
 ser_port = serial.Serial(port_name, 115200)
@@ -16,4 +17,15 @@ def send_serial(ser, data):
             print(str.encode(data), f"port: {ser}")
             #time.sleep(0.1)
 
-send_serial(ser_port, frame)
+def read_serial(ser):
+    while 1:
+        #readData = ser.read(250).decode()
+        readData = ser.readline().decode()
+        print(f"read line: {readData}")
+
+
+thread1 = threading.Thread(target=read_serial, args=(ser_port,))
+thread1.start()
+
+#thread2 = threading.Thread(target=send_serial, args=(ser_port,))
+#thread2.start()

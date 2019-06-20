@@ -21,7 +21,7 @@ for i in range(len(keys_all)):
     dict_out_time[keys_all[i]] = 0
 
 
-f = open("hab_test1.txt")
+f = open("test_data/hab_test1.txt")
 ff = [line for line in f]
 
 #frame = "<FROM=GS#TO=HAB#TEXT=TOMASZMIS#GPS=\"5213.19563,02100.57196\"#DWM=3482342874,234234234,12434234#CNT=20#RSSI=-20#>"

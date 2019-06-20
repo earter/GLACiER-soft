@@ -6,7 +6,7 @@ import time
 
 # test with arduino with "receive_send_to_pc.ino"
 
-f = open("nmea_itc_3.txt")
+f = open("test_data/nmea_itc_3.txt")
 ff = [line for line in f]
 
 port_name = "/dev/ttyUSB0"
@@ -30,12 +30,9 @@ def nmea2deg(raw):
 
 def handle_data(data):
     print(f"raw data: {data}")
-    position_deg = nmea2deg(data)
+    #position_deg = nmea2deg(data)
     #print(position_deg[0], position_deg[1])
     #print(f"total degrees data: {position_deg}")
-    log = open("log_gnss.txt", "w+")
-    log.write("ddd\n")
-    log.close()
 
 
 def read_serial(ser):
@@ -59,4 +56,3 @@ thread1.start()
 
 thread2 = threading.Thread(target=send_serial, args=(ser_port,))
 thread2.start()
-
