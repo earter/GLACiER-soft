@@ -1,7 +1,9 @@
 # NMEA coordinates is degrees minutes: (d)ddmm.mmmm
 # function converts it to degrees: D.d
 
-data = '5213.19563,02100.57196\r\n'
+
+# data = '5213.19563,02100.57196\r\n'
+data = "5000.19563,02100.57196"
 
 def nmea2deg(raw):
     def degmin(val):    # splits deg&mins in NMEA data

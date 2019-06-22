@@ -19,7 +19,7 @@ def nmea2deg(raw):
         valt = val.split('.')
         threshold = 3 if len(valt[0]) == 5 else 2
         return (float(val[0:threshold]), float(val[threshold:]))
-
+    raw = raw[5:27]
     raw = raw.split(',')
     lat = degmin(raw[0])
     lon = degmin(raw[1])
@@ -29,22 +29,21 @@ def nmea2deg(raw):
 
 
 def handle_data(data):
-    print(f"raw data: {data}")
-    #position_deg = nmea2deg(data)
+    print(data)
+    #print(f"raw data: {data}")
+    position_deg = nmea2deg(data)
     #print(position_deg[0], position_deg[1])
     #print(f"total degrees data: {position_deg}")
 
 
 def read_serial(ser):
     while 1:
-        #print("read test")
         readData = ser.readline().decode()
         handle_data(readData)
 
 
 def send_serial(ser):
     while 1:
-        #print("send test")
         for line in ff:
             ser.write(str.encode(line))
             #print(str.encode(line))

@@ -1,10 +1,13 @@
 import serial
+import threading
+
+# sends only one line from habitat to astronaut
 
 port_name = "/dev/ttyACM0"
 ser_port = serial.Serial(port_name, 115200)
 print(f"port opened: {ser_port.name}")
 
-payload = "szwajcarskie chuje"
+payload = "szwajcarskie"
 
 frame = f"<FROM=HAB#TO=AS#TEXT={payload}#>"
 

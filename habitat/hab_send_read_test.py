@@ -2,13 +2,10 @@ import serial
 import threading
 import time
 import datetime
-import re
 
 # test with an uart-usb converter with rx tx pins connected
 
-grep = "USB"
-#grep = "ACM"
-port_name = f"/dev/tty{grep}0"
+port_name = f"/dev/ttyUSB0"
 ser_port = serial.Serial(port_name, 115200)
 print(f"port opened: {ser_port.name}")
 
@@ -88,10 +85,8 @@ def handle_data(data):
 
 def read_serial(ser):
     while 1:
-        #readData = ser.read(250).decode()
         readData = ser.readline().decode()
-        #print(f"read line: {readData}")
-
+        print(f"read line: {readData}")
         handle_data(readData)
 
 
