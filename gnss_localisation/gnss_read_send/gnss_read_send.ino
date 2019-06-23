@@ -9,13 +9,23 @@ char separated[20];
 char *north;
 char *east;
 const char *separator = ",";
+unsigned long time_send;
+unsigned long time_check;
+unsigned long time_delta;
+
 
 void setup() {
   Serial.begin(19200);
+
 }
+
 void loop() {
-//  Serial.write("eloeloe\n");
-  if (Serial.available()){
+  //Serial.println("eloloe");
+  time_check = millis();
+  time_delta = time_check - time_send;
+  
+  if (Serial.available() && (time_delta>10000)){
+  //if (Serial.available() ){
     
     for (int i=0; i<12; i++){
       Serial.readBytesUntil('\n', buff[i], 100);
@@ -75,6 +85,7 @@ void loop() {
           buf_to_send[HF_MAX_BUFFER_MSG_SIZE]=0;
           
           Serial.print((char*)buf_to_send);
+          time_send = millis();
           
           //Serial.println(msg);
       }
