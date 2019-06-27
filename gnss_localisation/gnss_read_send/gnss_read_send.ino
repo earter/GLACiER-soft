@@ -20,11 +20,13 @@ void setup() {
 }
 
 void loop() {
-  //Serial.println("eloloe");
+  Serial.println("eloloe");
   time_check = millis();
   time_delta = time_check - time_send;
   
-  if (Serial.available() && (time_delta>10000)){
+  if (Serial.available()) { 
+    Serial.println("bbbb");
+    /*
   //if (Serial.available() ){
     
     for (int i=0; i<12; i++){
@@ -54,13 +56,7 @@ void loop() {
           }
           //Serial.println(pch);
           pch = strtok(NULL, ",");
-        }
-        /*
-          Serial.print("N: ");
-          Serial.println(north);
-          Serial.print("E: ");
-          Serial.println(east);
-          */
+
           strcat(north, separator);
           strcat(north, east);
           //Serial.println(north);
@@ -88,6 +84,7 @@ void loop() {
           time_send = millis();
           
           //Serial.println(msg);
+          
       }
     }
   
@@ -95,6 +92,6 @@ void loop() {
   memset(east, 0, sizeof east);
   memset(separated, 0, sizeof separated);
   memset(b2, 0, sizeof b2);
-  memset(buff, 0, sizeof buff);
+  memset(buff, 0, sizeof buff); */
   }
 }
