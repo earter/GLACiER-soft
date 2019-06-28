@@ -4,12 +4,7 @@
     <list default="true" id="6ad73d0a-1878-4c78-b8f3-53a0535f10aa" name="Default Changelist" comment="exended habitat">
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gnss_localisation/gnss_read_send/gnss_read_send.ino" beforeDir="false" afterPath="$PROJECT_DIR$/gnss_localisation/gnss_read_send/gnss_read_send.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habitat/deletenewlines.py" beforeDir="false" afterPath="$PROJECT_DIR$/habitat/deletenewlines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habitat/hab_read_send_real.py" beforeDir="false" afterPath="$PROJECT_DIR$/habitat/hab_read_send_real.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habitat/log_15:14:10.log" beforeDir="false" afterPath="$PROJECT_DIR$/habitat/gnss_visualisation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habitat/test_data/gnss_ard_ouput_fixed.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/habitat/test_data/log_gnss.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habitat/hab_read_send_real_wk_copy.py" beforeDir="false" afterPath="$PROJECT_DIR$/habitat/hab_read_send_real_wk_copy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +13,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/habitat/hab_read_send_real.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="3945">
               <caret line="271" column="11" selection-start-line="271" selection-start-column="11" selection-end-line="271" selection-end-column="11" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -34,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/habitat/hab_read_send_real_wk_copy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="211" column="24" lean-forward="true" selection-start-line="211" selection-start-column="24" selection-end-line="211" selection-end-column="24" />
+            <state relative-caret-position="65">
+              <caret line="371" column="33" selection-start-line="371" selection-start-column="33" selection-end-line="371" selection-end-column="33" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -46,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/habitat/gnss_visualisation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="270">
               <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -70,7 +65,6 @@
       <find>degmi</find>
       <find>gps</find>
       <find>&gt;</find>
-      <find>weather</find>
       <find>print</find>
       <find>anima</find>
       <find>updat</find>
@@ -78,6 +72,9 @@
       <find>new</find>
       <find>gnss_txt</find>
       <find>now</find>
+      <find>fake</find>
+      <find>weather</find>
+      <find>xgn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,6 +112,7 @@
         <option value="$PROJECT_DIR$/habitat/gnss_visualisation.py" />
         <option value="$PROJECT_DIR$/habitat/tkinter_matplotlib.py" />
         <option value="$PROJECT_DIR$/habitat/hab_read_send_real_wk_cpy_02.py" />
+        <option value="$PROJECT_DIR$/habitat/serial_comms.py" />
         <option value="$PROJECT_DIR$/habitat/hab_read_send_real_wk_copy.py" />
       </list>
     </option>
@@ -129,7 +127,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,6 +149,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,11 +298,11 @@
     <frame x="-3" y="0" width="1372" height="745" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1824274" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1824274" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3279743" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996277" weight="0.25080386" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996277" weight="0.2073955" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3971061" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -365,16 +363,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="exended habitat" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/habitat/hab_send.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib/python3.6/tkinter/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -583,34 +571,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/habitat/log_20:56:40.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/habitat/log_20:56:28.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/habitat/log_20:56:54.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/habitat/log_21:16:14.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/log_20:56:40.log" />
+    <entry file="file://$PROJECT_DIR$/habitat/log_20:56:28.log" />
+    <entry file="file://$PROJECT_DIR$/habitat/log_20:56:54.log" />
+    <entry file="file://$PROJECT_DIR$/habitat/log_21:16:14.log" />
     <entry file="file://$PROJECT_DIR$/habitat/tkinter_matplotlib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/habitat/gnss_visualisation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -639,10 +609,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/serial_comms.py" />
     <entry file="file://$PROJECT_DIR$/habitat/hab_read_send_real.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="3945">
           <caret line="271" column="11" selection-start-line="271" selection-start-column="11" selection-end-line="271" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/habitat/gnss_visualisation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -651,8 +632,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/habitat/hab_read_send_real_wk_copy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="211" column="24" lean-forward="true" selection-start-line="211" selection-start-column="24" selection-end-line="211" selection-end-column="24" />
+        <state relative-caret-position="65">
+          <caret line="371" column="33" selection-start-line="371" selection-start-column="33" selection-end-line="371" selection-end-column="33" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

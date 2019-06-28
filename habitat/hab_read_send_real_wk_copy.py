@@ -1,20 +1,25 @@
 import matplotlib.pyplot as plt
 import matplotlib.animation as an
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import numpy as np
 import tkinter as tk
 import threading
 import serial
 import datetime
-import csv
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
+# TODO add last time readings to data
 
 # in habitat. simultaneously reads data from GroundStation and sends to astronaut via GS
+# whole system (HF communication + habitat reception) is non-deterministic, so "read_txt not defined" error can appear.
+# just try running GUI until it starts with no such error
 
+# 0 when we send data manually via GUI using <frames> from old records
+# 1 when we send only text strings via GUI eg "how are you? #01"
 global fake
 fake = 0
 
-global xgn, ygn # x gnss new
-xgn, ygn = 46.01621833,  7.74833983
+global xgn, ygn # x,y gnss new (the latest GNSS reading)
+xgn, ygn = 0,0          # example default data
 
 try:
     port_name = "/dev/ttyACM0"
@@ -24,8 +29,9 @@ try:
 except:
     pass
 
-now = datetime.datetime.now().strftime('%Y-%m-%d_%H:%M:%S')
+now = datetime.datetime.now().strftime('%Y-%m-%d_%H:%M:%S') # to include in log filenames
 
+# initialise dictionary with default read data and time readings
 keys_all = ['FROM', 'TO', 'TEXT']
 values_init = ['GS', 'HAB', 'INIT TEXT']
 dict_out_values = {}
@@ -56,7 +62,7 @@ def extract(data):  # used on raw read_data to put data in dictionary
     return dict_in
 
 
-def weather():
+def weather_gui_update():
     """ TODO
     weather_list = ['wd', 'ws', 'wda', 'wsa', 'h', 't', 'r', 'p', 'b']
     for i in range(0,len(weather_list)+1):
@@ -109,14 +115,14 @@ def update_data(dict_in):
             # dict_in['TEXT'] = gnss()
             gnss_txt.delete(1.0, tk.END)
             gnss_txt.insert(tk.END, f"{dict_out_values['TEXT'][0]:.7f}\n{dict_out_values['TEXT'][1]:.7f}")
-            # global xgn, ygn
-            # xgn = float(dict_out_values['TEXT'][0])
-            # ygn = float(dict_out_values['TEXT'][1])
+            global xgn, ygn
+            xgn = float(dict_out_values['TEXT'][1])
+            ygn = float(dict_out_values['TEXT'][0])
 
         elif dict_in['FROM'] == 'GSWEA':
             dict_in['TEXT'] = extract_text_data(dict_in['TEXT'])  # TODO nie zmieniac dictin. poprawic upadte dic()
             update_dict_out('TEXT')
-            weather()
+            weather_gui_update()
 
         elif (dict_in['FROM'] == 'ASUI' or dict_in['FROM'] == 'ASUIGS'):
             dict_in['TEXT'] = extract_text_data(dict_in['TEXT'])  # TODO nie zmieniac dictin. poprawic upadte dic()
@@ -147,10 +153,7 @@ def update_data(dict_in):
 
         (lat, lon) = nmea2deg(dict_in['TEXT'])
         dict_in['TEXT'] = (lat, lon)  # TODO nie zmieniac dict_in
-        # print(lat, lon)
         update_dict_out('TEXT')
-
-
 
     options = {'FROM': fro,
                'TO': to,
@@ -166,40 +169,38 @@ def update_data(dict_in):
     return dict_out_values, dict_out_time
 
 
-def write_console_data(dict_val, dict_time):
+def write_console_data(dict_val, dict_time):    # optional, instead of GUI
     print(f"{dict_val['FROM']}->{dict_val['TO']}\tmessage: {dict_val['TEXT']}\t messagelastupdate: {dict_time['TEXT']}")
 
 
-def handle_data(data):
+def handle_data(data):  # run functions to process read data
     data = extract(data)  # get dict_in
     (dv, dt) = update_data(data)   # get dict out: values and time (last update)
     # write_console_data(dv, dt)
 
-def prepare_frame(msg):
-    frame = f"<FROM=HAB#TO=AS#TEXT={msg}#>"
-    bare_frame = frame
-    for i in range(250-len(frame)):
-        frame += "."
-    frame += '\n'
-    return frame, bare_frame
-
-
-def add_dots(frame):        # TODO oneliner
-    frame = frame.rstrip()
-    for i in range(250-len(frame)):
-        frame += "."
-    frame += '\n'
-    return frame
-
 
 def send_serial():
+    # must send "<data>...." 250 chars frame to HF comms
+    def prepare_frame(msg):
+        frame = f"<FROM=HAB#TO=AS#TEXT={msg}#>"
+        bare_frame = frame
+        full_frame = add_dots(frame)
+        return full_frame, bare_frame
+
+    def add_dots(msg):        # TODO oneliner
+        frame = msg.rstrip()
+        for i in range(250-len(frame)):
+            frame += "."
+        frame += '\n'
+        return frame
+
     payload = payload_entry.get()
     if not payload:
         print("nothing sent")
     if fake:
-        send_data = add_dots(payload)          # for fake incoming <data> (fake/tests)
+        send_data = add_dots(payload)                   # for fake incoming <data> (tests using data from logs)
     else:
-        send_data, bare_frame = prepare_frame(payload)     # just for writing what you want(real action)
+        send_data, bare_frame = prepare_frame(payload)  # just for writing what you want (real action)
 
     ser_port.write(str.encode(send_data))
     send_date = datetime.datetime.now().strftime('%H:%M:%S')
@@ -367,30 +368,20 @@ b_txt = tk.Text(main, height=1, width=tel_width)
 b_txt.grid(column=txt_col, row=ROW_NO)
 ROW_NO += 1
 
-# CLOSE
-# clobut = tk.Button(main)
-# clobut.configure(text="close", command=fo.close())
-# clobut.grid(column=txt_col, row=ROW_NO)
-# ROW_NO += 1
 
-# -------- visu
-f = open("test_data/gnss_eva_1a_noempytlines.txt").readlines()
-gps_x = [float(item) for item in f[1::2]]
-gps_y = [float(item) for item in f[::2]]
-# data = [(gps_x[i], gps_y[i]) for i in range(len(gps_x))]
-x_iter = iter(gps_x)
-y_iter = iter(gps_y)
-
-# NW, SW, SE, NE
-# bound = [[45.937379, 7.729218], [45.936366, 7.729487], [45.936390, 7.729751], [45.937404, 7.729457],[45.937379, 7.729218]] # glacier
-bound = [[46.016134, 7.748301], [46.016026, 7.748325], [46.016056, 7.748508], [46.016159, 7.748470], [46.016134, 7.748301]] # hotel
+# -------- GNSS map visualisation
+# bound points: NW, SW, SE, NE
+# bound = [[45.937546, 7.728940], [45.936523, 7.729263], [45.936592, 7.729781], [45.937570, 7.729597], [45.937546, 7.728940]] # extended glacier
+bound = [[45.937379, 7.729218], [45.936366, 7.729487], [45.936390, 7.729751], [45.937404, 7.729457],[45.937379, 7.729218]] # glacier
+# bound = [[46.016134, 7.748301], [46.016026, 7.748325], [46.016056, 7.748508], [46.016159, 7.748470], [46.016134, 7.748301]] # hotel
 x_b = [i[1]for i in bound]
 y_b = [i[0]for i in bound]
-
 
 fig = plt.Figure(figsize=(5,5), dpi=100)
 ax = fig.add_subplot(111)
 ax.grid()
+# plt.xlabel("longitude [decimal degrees]")
+# plt.ylabel("longitude [decimal degrees]")
 plt.scatter(x_b,y_b,c='y')
 ax.plot(x_b,y_b,c='y')
 x, y = [] , []
@@ -405,10 +396,8 @@ plt.ylim(0.9*min(y_b),1.1*max(y_b))
 plt.gca().set_aspect('equal', adjustable='box')
 
 line2 = FigureCanvasTkAgg(fig, main)
-# line2.get_tk_widget().pack(side=tk.LEFT, fill=tk.BOTH)
 line2.get_tk_widget().grid(column=0, row=plot_row, rowspan=20)
 ROW_NO += 1
-
 
 def animate(i):
     x.append(xgn)
@@ -416,16 +405,14 @@ def animate(i):
     X = np.c_[x,y]
     sc.set_offsets(X)  # if we use ax.scatter instead, all existing points are overwritten
     print(X)
-    # xmin=X[:,0].min(); xmax=X[:,0].max()
-    # ymin=X[:,1].min(); ymax=X[:,1].max()
+    xmin=X[:,0].min(); xmax=X[:,0].max()
+    ymin=X[:,1].min(); ymax=X[:,1].max()
     # ax.set_xlim(xmin-0.1*(xmax-xmin),xmax+0.1*(xmax-xmin))
     # ax.set_ylim(ymin-0.1*(ymax-ymin),ymax+0.1*(ymax-ymin))
 
-
 ani = an.FuncAnimation(fig, animate, frames=3, interval=1000, repeat=True)
 
-
-# -------- end visu
+# -------- end GNSS map visualisation
 
 main.mainloop()
 
